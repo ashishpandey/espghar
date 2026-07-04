@@ -24,8 +24,8 @@ wifi:
   ap:
     ssid: "${devicename} Hotspot"
     password: !secret esphome_ap_password
-  output_power: 20dB  # Default: 20dB, set to 8.5dB if you experience connectivity issues! 
     
+  output_power: 8.5dB
 captive_portal:
     
 web_server:
