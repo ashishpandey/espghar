@@ -26,6 +26,8 @@ wifi:
     password: !secret esphome_ap_password
     
   output_power: 8.5dB
+  power_save_mode: none
+  # fast_connect: on
 captive_portal:
     
 web_server:
