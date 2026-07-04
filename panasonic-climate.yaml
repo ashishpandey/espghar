@@ -30,7 +30,22 @@ wifi:
   fast_connect: on
   min_auth_mode: WPA2
 captive_portal:
-    
+
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: "${devicename} IP Address"
+    ssid:
+      name: "${devicename} Connected SSID"
+    bssid:
+      name: "${devicename} Connected BSSID"
+    mac_address:
+      name: "${devicename} MAC Address"
+    scan_results:
+      name: "${devicename} WiFi Scan Results"
+    power_save_mode:
+      name: "${devicename} Wifi Power Save Mode"
+      
 web_server:
   port: 80
   
