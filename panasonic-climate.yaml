@@ -28,6 +28,7 @@ wifi:
   output_power: 8.5dB
   power_save_mode: none
   fast_connect: on
+  min_auth_mode: WPA2
 captive_portal:
     
 web_server:
