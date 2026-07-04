@@ -1,30 +1,86 @@
-# Board: ESP32-C3 Super Mini (Generic)
-# Definition: definitions/boards/esp32-c3-supermini/manifest.yaml
-
+substitutions:
+  devicename: br-ac-esp32
+  long_devicename: Bedroom AC ESP32
+  pcb_version: "P11-PTH-C3 250214"
+    
 esphome:
-  name: panasonic-climate
-  friendly_name: panasonic-climate
+  name: "${devicename}"
+  name_add_mac_suffix: false
+  comment: "${long_devicename} ${pcb_version}"
 
 esp32:
-  variant: esp32c3
-  flash_size: 4MB
+  board: esp32-c3-devkitm-1
   framework:
     type: esp-idf
+  variant: ESP32C3
 
+external_components:
+  source: github://DomiStyle/esphome-panasonic-ac
+  components: [panasonic_ac]
+  
+wifi:
+  ssid: !secret esphome_wifi_ssid
+  password: !secret esphome_wifi_password
+  ap:
+    ssid: "${devicename} Hotspot"
+    password: !secret esphome_ap_password
+  output_power: 20dB  # Default: 20dB, set to 8.5dB if you experience connectivity issues! 
+    
+captive_portal:
+    
+web_server:
+  port: 80
+  
 logger:
+  level: DEBUG
 
 api:
   encryption:
-    key: "H5l1S82552vxCFiP4dC/+GjgJ2h05TyjpD41Rc+IhEk="
+    key: !secret esphome_api_key
 
 ota:
   - platform: esphome
+    password: !secret ota_password
 
-wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
-  ap:
-    ssid: panasonic-clima Fallback Hotspot
-    password: "6X90odnryyaB"
+bluetooth_proxy:
 
-captive_portal:
+uart:
+  tx_pin: GPIO21
+  rx_pin: GPIO20
+  id: ac_uart
+  baud_rate: 9600
+  parity: EVEN
+
+switch:
+  - platform: restart
+    name: "$long_devicename Restart"
+  
+climate:
+  - platform: panasonic_ac
+    id: bedroom
+    type: cnt
+    name: "$long_devicename"
+    vertical_swing_select:
+      name: "$long_devicename Vertical Swing Mode"
+    outside_temperature:
+      name: "$long_devicename Outside Temperature"
+    current_power_consumption:
+      id: power_consumption_office
+      name: "$long_devicename Power Consumption"
+      unit_of_measurement: W
+      accuracy_decimals: 0
+      device_class: power
+      state_class: measurement
+
+sensor:
+  - platform: total_daily_energy
+    name: "$long_devicename Total Daily Energy"
+    power_id: power_consumption_office
+    filters:
+        - multiply: 0.001
+    unit_of_measurement: kWh
+    device_class: energy
+
+time:
+  - platform: homeassistant
+    id: my_time
