@@ -2,6 +2,7 @@
 
 substitutions:
   friendly_name: Server Rack Fans
+  ip_prefix: !secret ip_prefix
 
 esphome:
   name: rackfans
