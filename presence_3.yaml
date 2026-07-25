@@ -1,0 +1,8 @@
+substitutions:
+  name: presence-ld2410c-1
+  name_underscored: presence_ld2410c_1
+  friendly_name: Presence Sensor LD2410c 1
+  ip_suffix: 223
+
+packages:
+  usb_switch: !include common/.ld2410c-presence.yaml
