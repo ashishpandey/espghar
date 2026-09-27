@@ -102,6 +102,6 @@ display:
       }
 
       if (id(temp).has_state()) {
-        it.printf(127, 23, id(medium), TextAlign::BASELINE_RIGHT , "%.1f °C", id(temp).state);
+        it.printf(127, 32, id(medium), TextAlign::BASELINE_RIGHT , "%.1f °C", id(temp).state);
       }
 
