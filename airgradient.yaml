@@ -90,8 +90,8 @@ display:
       //   it.printf(0, 16, id(roboto_font), "%.1f%% RH", id(humidity).state);
       //   it.printf(0, 32, id(roboto_font), "%.0fppm", id(co2).state);
       //   it.printf(0, 48, id(roboto_font), "%.0f µg/m³", id(pm25).state);
-      it.printf(0, 0, id(small), TextAlign::TOP_LEFT, "Time and");
-      it.printf(0, 12, id(small), TextAlign::TOP_LEFT, "Temperature");
+      it.printf(0, 0, id(small), TextAlign::TOP_LEFT, "%.1f °C", id(temp).state);
+      it.printf(0, 128, id(small), TextAlign::TOP_RIGHT, "%.1f % RH", id(humidity).state);
 
       // Print time in HH:MM format
       it.printf(0, 60, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
