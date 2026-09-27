@@ -67,6 +67,7 @@ sensor:
   - platform: pmsx003
     type: PMSX003
     uart_id: uart_plantair
+    update_interval: 60s
     pm_2_5:
       id: pm25
       name: "Particulate Matter <2.5µm Concentration"
