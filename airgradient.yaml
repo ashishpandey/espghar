@@ -49,7 +49,7 @@ sensor:
     humidity:
       id: humidity
       name: "Humidity"
-    address: 0x44
+    # address: 0x44
     update_interval: 5s
   - platform: pmsx003
     type: PMSX003
