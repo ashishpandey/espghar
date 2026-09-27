@@ -2,7 +2,7 @@ substitutions:
   name: airgradient
   friendly_name: airgradient
   ip_prefix: !secret ip_prefix
-  ip_suffix: 223
+  ip_suffix: 213
 
 packages:
   base: !include common/.base.yaml
