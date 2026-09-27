@@ -61,6 +61,10 @@ sensor:
       name: "VOC Index"
     nox_index:
       name: "NOx Index"
+      compensation:
+    compensation:
+      temperature_source: temp
+      humidity_source: humidity
   - platform: pmsx003
     type: PMSX003
     uart_id: uart_plantair
