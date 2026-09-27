@@ -98,8 +98,8 @@ display:
       }
 
       if (id(co2).has_state()) {
-        it.printf(0, 32, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
-        it.printf(0, 56, id(small), TextAlign::BASELINE_LEFT, "ppm");
+        it.printf(0, 16, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
+        it.printf(0, 50, id(small), TextAlign::BASELINE_LEFT, "ppm");
       }
 
       if (id(temp).has_state()) {
