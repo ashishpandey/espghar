@@ -102,8 +102,8 @@ display:
         it.printf(0, 50, id(small), TextAlign::BASELINE_LEFT, "ppm");
       }
 
-      if (id(temp).has_state()) {
-        it.printf(127, 16, id(large), TextAlign::BASELINE_RIGHT , "%.1f", id(temp).state);
+      if (id(pm25).has_state()) {
+        it.printf(127, 16, id(large), TextAlign::BASELINE_RIGHT , "%.1f", id(pm25).state);
         it.printf(127, 50, id(small), TextAlign::BASELINE_RIGHT , "µg/m³");
       }
 
