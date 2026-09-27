@@ -94,7 +94,7 @@ display:
         it.printf(0, 0, id(small), TextAlign::TOP_LEFT, "%.1f °C", id(temp).state);
       }
       if (id(humidity).has_state()) {
-        it.printf(0, 128, id(small), TextAlign::TOP_RIGHT, "%.1f % RH", id(humidity).state);
+        it.printf(128, 0, id(small), TextAlign::TOP_RIGHT, "%.1f % RH", id(humidity).state);
       }
 
       if (id(pm25).has_state()) {
@@ -102,6 +102,6 @@ display:
       }
 
       if (id(temp).has_state()) {
-        it.printf(127, 23, id(medium), TextAlign::TOP_RIGHT , "%.1f °C", id(temp).state);
+        it.printf(127, 23, id(medium), TextAlign::BASELINE_RIGHT , "%.1f °C", id(temp).state);
       }
 
