@@ -84,7 +84,7 @@ font:
 
 display:
   - platform: ssd1306_i2c
-    model: "SSD1306 64x48"
+    model: "SSD1306 128x64"
     address: 0x3C
     lambda: |-
       it.printf(0, 0, id(helvetica), "%.1f°C", id(temp).state);
