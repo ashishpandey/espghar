@@ -41,11 +41,11 @@ uart:
   - rx_pin: GPIO8
     tx_pin: GPIO9
     baud_rate: 9600
-    id: uart1   # platair
+    id: uart_plantair   # platair
   - rx_pin: GPIO4
     tx_pin: GPIO2
     baud_rate: 9600
-    id: uart2   # sensair S8
+    id: uart_sensair   # sensair S8
 
 sensor:
   - platform: sht4x
@@ -59,12 +59,12 @@ sensor:
     update_interval: 5s
   - platform: pmsx003
     type: PMSX003
-    uart_id: uart1
+    uart_id: uart_plantair
     pm_2_5:
       id: pm25
       name: "Particulate Matter <2.5µm Concentration"
   - platform: senseair
-    uart_id: uart2
+    uart_id: uart_sensair
     co2:
       id: co2
       name: "SenseAir CO2 Value"
