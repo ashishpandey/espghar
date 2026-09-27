@@ -42,7 +42,7 @@ uart:
     id: uart2   # sensair S8
 
 sensor:
-  - platform: sht3xd
+  - platform: sht4x
     temperature:
       id: temp
       name: "Temperature"
