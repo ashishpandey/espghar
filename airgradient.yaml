@@ -29,7 +29,7 @@ wifi:
   fast_connect: on
 
 i2c:
-  sda: GPIO0
+  sda: GPIO4
   scl: GPIO5
   scan: true
   id: bus_a
@@ -42,7 +42,7 @@ uart:
     tx_pin: GPIO9
     baud_rate: 9600
     id: uart_plantair   # platair
-  - rx_pin: GPIO4
+  - rx_pin: GPIO0
     tx_pin: GPIO2
     baud_rate: 9600
     id: uart_sensair   # sensair S8
