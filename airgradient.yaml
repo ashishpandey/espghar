@@ -95,7 +95,7 @@ display:
 
       if (id(co2).has_state()) {
         it.printf(0, 44, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
-        it.printf(10, 52, id(small), TextAlign::TOP_LEFT, "ppm");
+        it.printf(5, 52, id(small), TextAlign::TOP_LEFT, "ppm");
       }
 
       if (id(pm25).has_state()) {
