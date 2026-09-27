@@ -105,6 +105,3 @@ display:
         it.printf(127, 23, id(medium), TextAlign::TOP_RIGHT , "%.1f °C", id(temp).state);
       }
 
-      if (id(humidity).has_state()) {
-        it.printf(127, 60, id(medium), TextAlign::BASELINE_RIGHT , "%.1f %%RH", id(humidity).state);
-      }
