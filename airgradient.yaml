@@ -71,9 +71,15 @@ sensor:
     update_interval: 60s
 
 font:
+  - file: "gfonts://Silkscreen"
+    id: small
+    size: 10
   - file: "gfonts://Roboto"
-    id: roboto_font
-    size: 14
+    id: large
+    size: 24
+  - file: "gfonts://Silkscreen"
+    id: medium
+    size: 15
 
 display:
   - platform: ssd1306_i2c
