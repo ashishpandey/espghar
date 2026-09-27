@@ -36,8 +36,8 @@ uart:
     tx_pin: GPIO9
     baud_rate: 9600
     id: uart1   # platair
-  - rx_pin: D4
-    tx_pin: D3
+  - rx_pin: GPIO4
+    tx_pin: GPIO2
     baud_rate: 9600
     id: uart2   # sensair S8
 
