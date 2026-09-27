@@ -22,11 +22,14 @@ wifi:
   power_save_mode: none
   fast_connect: on
 
-ld2410:
-
 i2c:
-  sda: D2
-  scl: D1
+  sda: GPIO4
+  scl: GPIO5
+  scan: true
+  id: bus_a
+  frequency: 50kHz # Lower frequency helps stability on super mini boards
+  sda_pullup_enabled: true
+  scl_pullup_enabled: true
 
 uart:
   - rx_pin: D5
