@@ -71,7 +71,7 @@ sensor:
     update_interval: 60s
 
 font:
-  - file: "gfonts://Silkscreen"
+  - file: "gfonts://Roboto"
     id: small
     size: 10
   - file: "gfonts://Roboto"
