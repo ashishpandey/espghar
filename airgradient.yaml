@@ -55,8 +55,12 @@ sensor:
     humidity:
       id: humidity
       name: "Humidity"
-    # address: 0x44
     update_interval: 5s
+  - platform: sgp4x
+    voc_index:
+      name: "VOC Index"
+    nox_index:
+      name: "NOx Index"
   - platform: pmsx003
     type: PMSX003
     uart_id: uart_plantair
