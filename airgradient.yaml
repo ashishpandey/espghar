@@ -80,7 +80,21 @@ display:
     model: "SSD1306 128x64"
     address: 0x3C
     lambda: |-
-      it.printf(0, 0, id(roboto_font), "%.1f°C", id(temp).state);
-      it.printf(0, 16, id(roboto_font), "%.1f%% RH", id(humidity).state);
-      it.printf(0, 32, id(roboto_font), "%.0fppm", id(co2).state);
-      it.printf(0, 48, id(roboto_font), "%.0f µg/m³", id(pm25).state);
+      //   it.printf(0, 0, id(roboto_font), "%.1f°C", id(temp).state);
+      //   it.printf(0, 16, id(roboto_font), "%.1f%% RH", id(humidity).state);
+      //   it.printf(0, 32, id(roboto_font), "%.0fppm", id(co2).state);
+      //   it.printf(0, 48, id(roboto_font), "%.0f µg/m³", id(pm25).state);
+      it.printf(0, 0, id(small), TextAlign::TOP_LEFT, "Time and");
+      it.printf(0, 12, id(small), TextAlign::TOP_LEFT, "Temperature");
+
+      // Print time in HH:MM format
+      it.strftime(0, 60, id(large), TextAlign::BASELINE_LEFT, "%H:%M", id(esptime).now());
+
+      if (id(temp).has_state()) {
+        it.printf(127, 23, id(medium), TextAlign::TOP_RIGHT , "%.1f", id(temp).state);
+      }
+
+      if (id(humidity).has_state()) {
+        it.printf(127, 60, id(medium), TextAlign::BASELINE_RIGHT , "%.1f%s",
+                  id(humidity).state, id(humidity).state.c_str());
+      }
