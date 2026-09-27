@@ -35,11 +35,11 @@ uart:
   - rx_pin: GPIO8
     tx_pin: GPIO9
     baud_rate: 9600
-    id: uart1
+    id: uart1   # platair
   - rx_pin: D4
     tx_pin: D3
     baud_rate: 9600
-    id: uart2
+    id: uart2   # sensair S8
 
 sensor:
   - platform: sht3xd
