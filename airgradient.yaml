@@ -103,6 +103,7 @@ display:
       }
 
       if (id(temp).has_state()) {
-        it.printf(127, 32, id(medium), TextAlign::BASELINE_RIGHT , "%.1f µg/m³", id(temp).state);
+        it.printf(127, 16, id(large), TextAlign::BASELINE_RIGHT , "%.1f", id(temp).state);
+        it.printf(127, 50, id(small), TextAlign::BASELINE_RIGHT , "µg/m³");
       }
 
