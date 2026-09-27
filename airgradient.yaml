@@ -61,7 +61,6 @@ sensor:
       name: "VOC Index"
     nox_index:
       name: "NOx Index"
-      compensation:
     compensation:
       temperature_source: temp
       humidity_source: humidity
