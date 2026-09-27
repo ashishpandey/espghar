@@ -74,6 +74,7 @@ font:
   - file: "gfonts://Roboto"
     id: small
     size: 10
+    glyphs: " %/³gmµp"
   - file: "gfonts://Roboto"
     id: large
     size: 24
