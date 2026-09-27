@@ -88,7 +88,7 @@ display:
     address: 0x3C
     lambda: |-
       it.line(66, 0, 66, 63);
-      it.line(0, 18, 127, 18);
+      it.line(0, 20, 127, 20);
 
       if (id(temp).has_state()) {
         it.printf(0, 0, id(medium), TextAlign::TOP_LEFT, "%.1f°C", id(temp).state);
@@ -98,12 +98,12 @@ display:
       }
 
       if (id(co2).has_state()) {
-        it.printf(0, 44, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
+        it.printf(0, 46, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
         it.printf(5, 52, id(small), TextAlign::TOP_LEFT, "ppm");
       }
 
       if (id(pm25).has_state()) {
-        it.printf(127, 44, id(large), TextAlign::BASELINE_RIGHT, "%.1f", id(pm25).state);
+        it.printf(127, 46, id(large), TextAlign::BASELINE_RIGHT, "%.1f", id(pm25).state);
         it.printf(127, 52, id(small), TextAlign::TOP_RIGHT, "µg/m³");
       }
 
