@@ -97,8 +97,9 @@ display:
         it.printf(0, 128, id(small), TextAlign::TOP_RIGHT, "%.1f % RH", id(humidity).state);
       }
 
-      // Print time in HH:MM format
-      it.printf(0, 60, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
+      if (id(pm25).has_state()) {
+        it.printf(0, 32, id(small), TextAlign::BASELINE_LEFT, "%.0f µg/m³", id(pm25).state);
+      }
 
       if (id(temp).has_state()) {
         it.printf(127, 23, id(medium), TextAlign::TOP_RIGHT , "%.1f °C", id(temp).state);
