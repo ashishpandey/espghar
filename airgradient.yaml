@@ -86,10 +86,6 @@ display:
     model: "SSD1306 128x64"
     address: 0x3C
     lambda: |-
-      //   it.printf(0, 0, id(roboto_font), "%.1f°C", id(temp).state);
-      //   it.printf(0, 16, id(roboto_font), "%.1f%% RH", id(humidity).state);
-      //   it.printf(0, 32, id(roboto_font), "%.0fppm", id(co2).state);
-      //   it.printf(0, 48, id(roboto_font), "%.0f µg/m³", id(pm25).state);
       if (id(temp).has_state()) {
         it.printf(0, 0, id(small), TextAlign::TOP_LEFT, "%.1f °C", id(temp).state);
       }
@@ -98,12 +94,13 @@ display:
       }
 
       if (id(co2).has_state()) {
-        it.printf(0, 16, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
-        it.printf(0, 50, id(small), TextAlign::BASELINE_LEFT, "ppm");
+        it.printf(0, 44, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
+        it.printf(0, 52, id(small), TextAlign::TOP_LEFT, "ppm");
       }
 
       if (id(pm25).has_state()) {
-        it.printf(127, 16, id(large), TextAlign::BASELINE_RIGHT , "%.1f", id(pm25).state);
-        it.printf(127, 50, id(small), TextAlign::BASELINE_RIGHT , "µg/m³");
+        it.printf(127, 44, id(large), TextAlign::BASELINE_RIGHT, "%.1f", id(pm25).state);
+        it.printf(127, 52, id(small), TextAlign::TOP_RIGHT, "µg/m³");
       }
+
 
