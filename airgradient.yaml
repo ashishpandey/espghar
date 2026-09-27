@@ -87,8 +87,8 @@ display:
     model: "SSD1306 128x64"
     address: 0x3C
     lambda: |-
-      it.line(63, 0, 63, 63);
-      it.line(0, 16, 127, 16);
+      it.line(66, 0, 66, 63);
+      it.line(0, 18, 127, 18);
 
       if (id(temp).has_state()) {
         it.printf(0, 0, id(medium), TextAlign::TOP_LEFT, "%.1f°C", id(temp).state);
