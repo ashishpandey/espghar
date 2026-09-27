@@ -23,7 +23,7 @@ wifi:
   fast_connect: on
 
 i2c:
-  sda: GPIO4
+  sda: GPIO0
   scl: GPIO5
   scan: true
   id: bus_a
