@@ -101,6 +101,5 @@ display:
       }
 
       if (id(humidity).has_state()) {
-        it.printf(127, 60, id(medium), TextAlign::BASELINE_RIGHT , "%.1f %%RH",
-                  id(humidity).state, id(humidity).state.c_str());
+        it.printf(127, 60, id(medium), TextAlign::BASELINE_RIGHT , "%.1f %%RH", id(humidity).state);
       }
