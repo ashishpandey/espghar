@@ -94,7 +94,7 @@ display:
       it.printf(0, 12, id(small), TextAlign::TOP_LEFT, "Temperature");
 
       // Print time in HH:MM format
-      it.strftime(0, 60, id(large), TextAlign::BASELINE_LEFT, "%H:%M", id(co2).now());
+      it.strftime(0, 60, id(large), TextAlign::BASELINE_LEFT, "%H:%M", id(co2).state);
 
       if (id(temp).has_state()) {
         it.printf(127, 23, id(medium), TextAlign::TOP_RIGHT , "%.1f °C", id(temp).state);
