@@ -87,10 +87,10 @@ display:
     address: 0x3C
     lambda: |-
       if (id(temp).has_state()) {
-        it.printf(0, 0, id(medium), TextAlign::TOP_LEFT, "%.1f °C", id(temp).state);
+        it.printf(0, 0, id(medium), TextAlign::TOP_LEFT, "%.1f°C", id(temp).state);
       }
       if (id(humidity).has_state()) {
-        it.printf(127, 0, id(medium), TextAlign::TOP_RIGHT, "%.1f % RH", id(humidity).state);
+        it.printf(127, 0, id(medium), TextAlign::TOP_RIGHT, "%.1f %%", id(humidity).state);
       }
 
       if (id(co2).has_state()) {
