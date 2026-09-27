@@ -88,6 +88,7 @@ display:
     address: 0x3C
     lambda: |-
       it.line(63, 0, 63, 63);
+      it.line(0, 16, 127, 16);
 
       if (id(temp).has_state()) {
         it.printf(0, 0, id(medium), TextAlign::TOP_LEFT, "%.1f°C", id(temp).state);
