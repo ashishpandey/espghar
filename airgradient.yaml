@@ -71,11 +71,16 @@ sensor:
     update_interval: 60s
 
 font:
-  - file: "fonts/helvetica.ttf"
-    id: helvetica
-    size: 12
-    glyphs: |
-      !"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzµ³/
+  - file: "gfonts://Roboto"
+    id: my_roboto_font
+    size: 14
+
+# font:
+#   - file: "fonts/helvetica.ttf"
+#     id: helvetica
+#     size: 12
+#     glyphs: |
+#       !"%()+=,-_.:°0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyzµ³/
 
 display:
   - platform: ssd1306_i2c
