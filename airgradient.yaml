@@ -8,6 +8,7 @@ packages:
   base: !include common/.base.yaml
   esp_info: !include common/.esp-info.yaml
   led: !include common/airgradient/led.yaml
+  led_combo: !include common/airgradient/led_combo.yaml
 
 esphome:
   name: airgradient
