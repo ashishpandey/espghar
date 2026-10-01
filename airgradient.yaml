@@ -55,8 +55,10 @@ sensor:
   - platform: sgp4x
     voc_index:
       name: "VOC Index"
+      id: voc
     nox_index:
       name: "NOx Index"
+      id: nox
     compensation:
       temperature_source: temp
       humidity_source: humidity
