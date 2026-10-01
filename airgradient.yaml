@@ -34,8 +34,8 @@ i2c:
   scl_pullup_enabled: true
 
 uart:
-  - rx_pin: GPIO9
-    tx_pin: GPIO8
+  - rx_pin: GPIO8
+    tx_pin: GPIO9
     baud_rate: 9600
     id: uart_plantair   # platair
   - rx_pin: GPIO2
