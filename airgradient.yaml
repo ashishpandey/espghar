@@ -30,7 +30,7 @@ wifi:
 
 i2c:
   sda: GPIO4
-  scl: GPI21
+  scl: GPIO21
   scan: true
   id: bus_a
   frequency: 50kHz # Lower frequency helps stability on super mini boards
