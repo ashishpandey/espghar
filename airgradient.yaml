@@ -39,7 +39,7 @@ i2c:
 
 uart:
   - rx_pin: GPIO9
-    tx_pin: GPIO9
+    tx_pin: GPIO8
     baud_rate: 9600
     id: uart_plantair   # platair
   - rx_pin: GPIO2
