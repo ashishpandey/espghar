@@ -81,6 +81,11 @@ sensor:
       id: co2
       name: "SenseAir CO2 Value"
     update_interval: 60s
+  - platform: aqi
+    name: "Air Quality Index"
+    pm_2_5: pm25
+    pm_10_0: pm100
+    calculation_type: AQI
 
 # font:
 #   - file: "gfonts://Roboto"
