@@ -76,42 +76,42 @@ sensor:
       name: "SenseAir CO2 Value"
     update_interval: 60s
 
-font:
-  - file: "gfonts://Roboto"
-    id: small
-    size: 10
-    glyphs: " %/³gmµp"
-  - file: "gfonts://Roboto"
-    id: large
-    size: 24
-  - file: "gfonts://Silkscreen"
-    id: medium
-    size: 15
+# font:
+#   - file: "gfonts://Roboto"
+#     id: small
+#     size: 10
+#     glyphs: " %/³gmµp"
+#   - file: "gfonts://Roboto"
+#     id: large
+#     size: 24
+#   - file: "gfonts://Silkscreen"
+#     id: medium
+#     size: 15
 
-display:
-  - platform: ssd1306_i2c
-    model: "SSD1306 128x64"
-    address: 0x3C
-    lambda: |-
-      it.line(66, 0, 66, 63);
-      it.line(0, 20, 127, 20);
+# display:
+#   - platform: ssd1306_i2c
+#     model: "SSD1306 128x64"
+#     address: 0x3C
+#     lambda: |-
+#       it.line(66, 0, 66, 63);
+#       it.line(0, 20, 127, 20);
 
-      if (id(temp).has_state()) {
-        it.printf(0, 0, id(medium), TextAlign::TOP_LEFT, "%.1f°C", id(temp).state);
-      }
-      if (id(humidity).has_state()) {
-        it.printf(127, 0, id(medium), TextAlign::TOP_RIGHT, "%.1f%%", id(humidity).state);
-      }
+#       if (id(temp).has_state()) {
+#         it.printf(0, 0, id(medium), TextAlign::TOP_LEFT, "%.1f°C", id(temp).state);
+#       }
+#       if (id(humidity).has_state()) {
+#         it.printf(127, 0, id(medium), TextAlign::TOP_RIGHT, "%.1f%%", id(humidity).state);
+#       }
 
-      if (id(co2).has_state()) {
-        it.printf(0, 46, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
-        it.printf(5, 52, id(small), TextAlign::TOP_LEFT, "ppm");
-      }
+#       if (id(co2).has_state()) {
+#         it.printf(0, 46, id(large), TextAlign::BASELINE_LEFT, "%.0f", id(co2).state);
+#         it.printf(5, 52, id(small), TextAlign::TOP_LEFT, "ppm");
+#       }
 
-      if (id(pm25).has_state()) {
-        it.printf(127, 46, id(large), TextAlign::BASELINE_RIGHT, "%.1f", id(pm25).state);
-        it.printf(127, 52, id(small), TextAlign::TOP_RIGHT, "µg/m³");
-      }
+#       if (id(pm25).has_state()) {
+#         it.printf(127, 46, id(large), TextAlign::BASELINE_RIGHT, "%.1f", id(pm25).state);
+#         it.printf(127, 52, id(small), TextAlign::TOP_RIGHT, "µg/m³");
+#       }
 
 packages:
   base: !include common/.base.yaml
