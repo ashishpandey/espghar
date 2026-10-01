@@ -3,6 +3,19 @@ substitutions:
   friendly_name: airgradient
   ip_prefix: !secret ip_prefix
   ip_suffix: 213
+  co2_green: '400'
+  co2_yellow: '1000'
+  co2_red: '2000'
+  co2_purple: '4000'
+  pm_2_5_green: '0'
+  pm_2_5_yellow: '11'
+  pm_2_5_red: '56'
+  pm_2_5_purple: '201'
+  voc_green: '100'
+  voc_yellow: '150'
+  voc_red: '250'
+  voc_purple: '400'
+  voc_blue: '50'
 
 packages:
   base: !include common/.base.yaml
