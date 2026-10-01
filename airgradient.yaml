@@ -118,3 +118,4 @@ packages:
   esp_info: !include common/.esp-info.yaml
   led: !include common/airgradient/led.yaml
   led_combo: !include common/airgradient/led_combo.yaml
+  display: !include common/airgradient/display.yaml
