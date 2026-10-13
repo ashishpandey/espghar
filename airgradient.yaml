@@ -25,8 +25,8 @@ wifi:
   fast_connect: on
 
 i2c:
-  sda: GPIO4
-  scl: GPIO21
+  sda: GPIO8
+  scl: GPIO9
   scan: true
   id: bus_a
   frequency: 50kHz # Lower frequency helps stability on super mini boards
@@ -34,12 +34,12 @@ i2c:
   scl_pullup_enabled: true
 
 uart:
-  - rx_pin: GPIO8
-    tx_pin: GPIO9
+  - rx_pin: GPIO0
+    tx_pin: GPIO1
     baud_rate: 9600
     id: uart_plantair   # platair
-  - rx_pin: GPIO2
-    tx_pin: GPIO0
+  - rx_pin: GPIO10
+    tx_pin: GPIO5
     baud_rate: 9600
     id: uart_sensair   # sensair S8
 
