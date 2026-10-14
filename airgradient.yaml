@@ -24,6 +24,9 @@ wifi:
   power_save_mode: none
   fast_connect: on
 
+api:
+  reboot_timeout: 15min
+
 i2c:
   sda: GPIO8
   scl: GPIO9
